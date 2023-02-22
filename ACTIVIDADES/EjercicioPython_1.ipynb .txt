@@ -1,0 +1,141 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": []
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "source": [
+        "A2. Ejercicios Phyton \n",
+        "Diego Isaac Rodriguez Monsivaiz \n",
+        "#1951669 N1\n"
+      ],
+      "metadata": {
+        "id": "MRrjqCoajtpR"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Desarrolla un algoritmo que le pida al usuario por su nombre y que lo salude con su nombre, excepto si se llama “Ana”, “Juan”, y “Pedro”."
+      ],
+      "metadata": {
+        "id": "m15lDdB7lV7o"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Pedir al usuario que ponga  su nombre\n",
+        "nombre = input(\"Por favor, ingresa tu nombre: \")\n",
+        "\n",
+        "# Checar  si el nombre es Ana, Juan o Pedro\n",
+        "if nombre == \"Ana\" or nombre == \"Juan\" or nombre == \"Pedro\":\n",
+        "  print(\"No puedo saludarte\")\n",
+        "else:\n",
+        "    print(\"¡Hola, \" + nombre + \"!\")\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "1nHMYtO9td-a",
+        "outputId": "2921f656-f2b8-4768-c2c1-3abdb6144574"
+      },
+      "execution_count": 51,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Por favor, ingresa tu nombre: Ana\n",
+            "No puedo saludarte\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Desarrolla un algoritmo que por medio de una función, le pida al usuario una lista de N elementos y como resultado invierta el sentido de la lista. "
+      ],
+      "metadata": {
+        "id": "ZIH6E_t4uXGV"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "lista = input(\"Coloque  los caracteres  de la lista separados por espacios: \").split()\n",
+        "lista_invertida = lista[::-1]\n",
+        "print(\"Tu lista invertida es:\", lista_invertida)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "lwc6AdRDzd1u",
+        "outputId": "230509dc-dc4b-410f-a579-ebc1779397cc"
+      },
+      "execution_count": 53,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Coloque  los caracteres  de la lista separados por espacios: 2 4 6 8 10\n",
+            "Tu lista invertida es: ['10', '8', '6', '4', '2']\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Desarrolla un algoritmo que le pregunte al usuario cuántos números de la serie de Fibonnaci quiere generar y que al final los imprima."
+      ],
+      "metadata": {
+        "id": "4ZeAhYsqyVg6"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "n = int(input(\"¿Cuántos números de la serie de Fibonacci quieres generar? \"))\n",
+        "a, b = 0, 1\n",
+        "for i in range(n):\n",
+        "    print(a, end=\" \")\n",
+        "a, b = b, a+b\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "exLN0mxa0UYz",
+        "outputId": "de7ad7b6-de5a-4d3a-ca2e-41cebdf0c90c"
+      },
+      "execution_count": 60,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "¿Cuántos números de la serie de Fibonacci quieres generar? 3\n",
+            "0 0 0 "
+          ]
+        }
+      ]
+    }
+  ]
+}
